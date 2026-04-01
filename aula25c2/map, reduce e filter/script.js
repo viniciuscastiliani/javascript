@@ -9,6 +9,14 @@
             - Item por Item do array
             - Posição atual do array
             - Array completo
+
+    REDUCE (reduzir o Array a um único valor)
+        - Reduz um Array inteiro a um ÚNICO valor
+            - Você tem acesso a 4 dados:
+                - Acumulador
+                - Valor atual
+                - Posição atual
+                - Array completo
             
 */
 
@@ -34,7 +42,8 @@ const produtos = [
     { id: 10, nome: "Caixa de Som Portátil", preco: 1000.00, temDesconto: false, quantidade: 3 },
 ];
 
-const novosProdutos = produtos.map( produto => {
+// Criar um novo Array formatando a moeda e dando desconto aos clientes
+/* const novosProdutos = produtos.map( produto => {
 
     const novoPreco = produto.temDesconto ? produto.preco * 0.9 : produto.preco
 
@@ -50,4 +59,30 @@ const novosProdutos = produtos.map( produto => {
     }
 })
 
-console.log(novosProdutos)
+console.log(novosProdutos) */
+
+
+// Exemplo prático
+/*
+const numeros = [1, 2, 3, 4, 5]
+
+const soma = numeros.reduce((acumulador, atual) => {
+    const total = acumulador + atual
+
+    return total
+})
+
+console.log(soma)
+*/
+
+// Qual será o faturamento, se vendermos todo o estoque?
+
+const totalVendas = produtos.reduce((acumulador, produto) => {
+
+
+    return acumulador + (produto.preco * produto.quantidade)
+}, 0)
+
+console.log(totalVendas.toLocaleString('pt-br', {
+            style: 'currency', currency: 'BRL'
+        }))
