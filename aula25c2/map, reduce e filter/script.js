@@ -17,6 +17,13 @@
                 - Valor atual
                 - Posição atual
                 - Array completo
+
+    FILTER (Filtrar novo Array)
+        - Cria um novo Array filtrando os valores desejados do Array original
+        - Você tem acesso a 3 dados:
+            - Item por item do Array
+            - Posição atual do Array
+            - Array completo
             
 */
 
@@ -77,12 +84,29 @@ console.log(soma)
 
 // Qual será o faturamento, se vendermos todo o estoque?
 
-const totalVendas = produtos.reduce((acumulador, produto) => {
+/* const totalVendas = produtos.reduce((acumulador, produto) => {
 
 
     return acumulador + (produto.preco * produto.quantidade)
 }, 0)
 
 console.log(totalVendas.toLocaleString('pt-br', {
-            style: 'currency', currency: 'BRL'
+            style: 'currency', 
+            currency: 'BRL',
         }))
+
+*/
+
+// FILTRAR SOMENTE OS PRODRUTOS EM PROMOÇÃO
+
+/* Exemplo com números pares para Filter
+const numeros = [1,2,3,4,5,6,7,8,9,10]
+const pares = numeros.filter( numero => {
+    return numero > 6
+})
+
+console.log(pares) */
+
+const promocao = produtos.filter( produto => produto.temDesconto)
+
+console.log(promocao)
