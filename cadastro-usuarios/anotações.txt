@@ -28,3 +28,7 @@ index.html
 -arquivo principal do projeto
 
 *não mexer nos arquivos que estão fora da pasta SRC
+
+Arquivos do react são em formatos .jsx (formato de documento) mistura de html, css e javascript, tudo no mesmo arquivo. Usa-se muito componentes
+
+React é um SPA (single page aplicattion) aplicação de página única
