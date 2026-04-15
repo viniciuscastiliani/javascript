@@ -1,0 +1,30 @@
+package.json: coração do projeto React, informações do projeto, a versão, scripts
+- ferramentas lint - ferramentas de organização de códigos
+- planta baixo do projeto
+
+Node_modules:
+-pasta tipo arquivos de programa (toda a tralha)
+
+Pasta Public:
+logo, imagens e etc...
+
+Package-lock.json:
+parecido com o package.json, informações do projeto
+
+Readme.md:
+informações do projeto
+
+vite.config.js:
+- configurações do vite (não mexer)
+
+eslint.config.js
+-configurações do lint (ferramentas de organização de códigos)
+-regras de organização
+
+gitignore:
+- arquivos que não devem subir para o Github
+
+index.html
+-arquivo principal do projeto
+
+*não mexer nos arquivos que estão fora da pasta SRC
