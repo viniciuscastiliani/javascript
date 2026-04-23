@@ -1,10 +1,35 @@
 import './App.css'
+import { useState } from 'react'
+
+/*
+1 - Função (Código muito antigo, pode ser uma classe)
+2 - Ele tem um return
+3 - Fora do return / Código JavaScript
+4 - Dentro do return / Código "HTML"
+
+    useState (estado do react)
+    Estado - Super Variável
+    Não fica carregando a tela poor nada e nem a tela toda
+*/
 
 // todo componente do react é assim: 1) é uma função, 2) ele tem um return: fora do return é cod javascript, dentro do returno é cod HTML
 function App() {
+
+const [name, setName] = useState("Vinicius")
+const [email, setEmail] = useState("viniciuscastiliani@gmail.com")
+const [age, setAge] = useState(40)
+const [users, setUsers] = useState()
+// O estado tem dois carinhas: Variável em si, que eu pego o valor dela
+// (set) uma função para colocar o valor dentro da variável
+
+let valorInput = "Vinicius"
+
   function handleSubmit(event){
     event.preventDefault()
+
+    setName("Gustavo")
     
+    console.log()
   }
 
   return (
@@ -19,16 +44,20 @@ function App() {
         <input 
           placeholder='Nome' 
           type='text'
+          value={name}
+          onChange={name}
         />
 
         <input 
           placeholder='Email' 
           type='email'
+          value={email}
         />
 
         <input 
           placeholder='Idade'
           type='number' 
+          value={age}
         />
 
         <button type='submit'>Cadastrar</button>
