@@ -26,10 +26,8 @@ let valorInput = "Vinicius"
 
   function handleSubmit(event){
     event.preventDefault()
-
-    setName("Gustavo")
-    
-    console.log()
+  
+    console.log(event)
   }
 
   return (
