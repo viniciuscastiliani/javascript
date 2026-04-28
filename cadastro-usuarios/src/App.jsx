@@ -18,16 +18,24 @@ function App() {
 const [name, setName] = useState("Vinicius")
 const [email, setEmail] = useState("viniciuscastiliani@gmail.com")
 const [age, setAge] = useState(40)
-const [users, setUsers] = useState()
+const [users, setUsers] = useState([])
 // O estado tem dois carinhas: Variável em si, que eu pego o valor dela
 // (set) uma função para colocar o valor dentro da variável
 
-let valorInput = "Vinicius"
 
   function handleSubmit(event){
     event.preventDefault()
-  
-    console.log(event)
+    
+    const newUser = {
+      name,
+      email,
+      age,
+    }
+
+    console.log(users)
+
+    setUsers ([...users, newUser]) //spread operator (manter todo mundo que já tinha e adicionar um novo usuário)
+
   }
 
   return (
@@ -43,27 +51,37 @@ let valorInput = "Vinicius"
           placeholder='Nome' 
           type='text'
           value={name}
-          onChange={name}
+          onChange={event => setName(event.target.value)}
         />
 
         <input 
           placeholder='Email' 
           type='email'
           value={email}
+          onChange={event => setEmail(event.target.value)}
         />
 
         <input 
           placeholder='Idade'
           type='number' 
           value={age}
+          onChange={event => setAge(event.target.value)}
         />
 
         <button type='submit'>Cadastrar</button>
 
       </form>
 
-      <div className='user-list'>
-        <p>Usuários cadastrados</p>
+      <div className='user-list'> {/* Return - apenas 1 elemento*/}
+        
+        {users.map((user) => (
+          <div>
+            <p>{user.name}</p>
+            <p>{user.age}</p>
+            <p>{user.email}</p>
+          </div>
+        ))}
+      
       </div>
 
     </div>
