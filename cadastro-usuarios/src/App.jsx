@@ -1,5 +1,6 @@
 import './App.css'
 import { useState } from 'react'
+import UserCard from './components/UserCard'
 
 /*
 1 - Função (Código muito antigo, pode ser uma classe)
@@ -27,6 +28,7 @@ const [users, setUsers] = useState([])
     event.preventDefault()
     
     const newUser = {
+      id: Date.now(),
       name,
       email,
       age,
@@ -73,15 +75,11 @@ const [users, setUsers] = useState([])
       </form>
 
       <div className='user-list'> {/* Return - apenas 1 elemento*/}
-        
-        {users.map((user) => (
-          <div>
-            <p>{user.name}</p>
-            <p>{user.age}</p>
-            <p>{user.email}</p>
-          </div>
+
+        {users.map ((user) => (
+          <UserCard key={user.id} user={user}/>
         ))}
-      
+
       </div>
 
     </div>
