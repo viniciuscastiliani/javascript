@@ -13,3 +13,7 @@ p {
   background-color: #999;
   padding: 10px;
 }
+
+form > div {
+  padding: 8px;
+}
