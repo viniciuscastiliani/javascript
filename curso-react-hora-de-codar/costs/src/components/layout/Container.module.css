@@ -1,9 +1,12 @@
 .container {
-    width: 1200px;
-    display: flex;
-    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
+    padding: 2em;
+    display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: border-box;
 }
 
 .minHeight {
