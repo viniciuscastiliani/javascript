@@ -4,12 +4,22 @@ function Select({ text, name, options, handleOnChange, value }) {
     return (
         <div className={styles.formControl}>
             <label htmlFor={name}>{text}:</label>
-            <select>
+
+            <select
                 name={name}
                 id={name}
-                <option>Selecione uma opção</option>
+                onChange={handleOnChange}
+                value={value}
+            >
+                <option value="">
+                    Selecione uma opção
+                </option>
+
                 {options.map((option) => (
-                    <option value={option.id} key={option.id}>
+                    <option
+                        key={option.id}
+                        value={option.id}
+                    >
                         {option.name}
                     </option>
                 ))}

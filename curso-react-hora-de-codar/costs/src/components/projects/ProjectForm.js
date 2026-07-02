@@ -5,7 +5,7 @@ import Select from '../form/Select'
 import SubmitButton from '../form/SubmitButton'
 import styles from './ProjectForm.module.css'
 
-function ProjectForm( {btnText} ) {
+function ProjectForm({ btnText }) {
 
     const [categories, setCategories] = useState([])
 
@@ -13,35 +13,42 @@ function ProjectForm( {btnText} ) {
         fetch("http://localhost:5000/categories", {
             method: "GET",
             headers: {
-                'Content-Type': 'application/json'
+                "Content-Type": "application/json"
             }
-        }).then((resp) => resp.json())
+        })
+            .then((resp) => resp.json())
             .then((data) => {
-                setCategories = (data)
+                console.log(data)
+                setCategories(data)
             })
             .catch((err) => console.log(err))
     }, [])
 
+    console.log(categories)
+
     return (
         <form className={styles.form}>
-            <Input 
+            <Input
                 type="text"
                 text="Nome do Projeto"
                 name="name"
                 placeholder="Insira o nome do Projeto"
             />
-            
-            <Input 
+
+            <Input
                 type="number"
                 text="Orçamento do Projeto"
                 name="budget"
                 placeholder="Insira o orçamento total"
             />
-            
-            <Select name="categoryId" text="Selecione a categoria" options={categories} />
+
+            <Select
+                name="categoryId"
+                text="Selecione a categoria"
+                options={categories}
+            />
 
             <SubmitButton text={btnText} />
-
         </form>
     )
 }
