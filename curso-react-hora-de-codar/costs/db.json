@@ -1,24 +1,133 @@
 {
-    "projects": [],
-    "categories": [
-        {
-            "id": 1,
-            "name": "Infra"
-        },
-
-        {
-            "id": 2,
-            "name": "Desenvolvimento"
-        },
-
-        {
-            "id": 3,
-            "name": "Design"
-        },
-
-        {
-            "id": 41,
-            "name": "Planejamento"
-        }
-    ]
+  "projects": [
+    {
+      "name": "projeto teste",
+      "budget": "2000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": "bJjnpA7faPw"
+    },
+    {
+      "name": "projeto teste",
+      "budget": "2000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": "9U3nhMZASQc"
+    },
+    {
+      "name": "projeto teste",
+      "budget": "2000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": "2r6UsobxbDk"
+    },
+    {
+      "name": "projeto teste",
+      "budget": "2000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": "allPd-VQ3bw"
+    },
+    {
+      "name": "projeto teste",
+      "budget": "2000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": "d9s8hZBMcQc"
+    },
+    {
+      "name": "projeto teste",
+      "budget": "2000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": "viaoROwZWWk"
+    },
+    {
+      "name": "projeto teste",
+      "budget": "2000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": "eqopVtV1MMY"
+    },
+    {
+      "name": "projeto teste",
+      "budget": "2000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": "GQUdgKW3XtI"
+    },
+    {
+      "name": "projeto teste",
+      "budget": "2000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": "wvHzIlU-ibQ"
+    },
+    {
+      "name": "projeto teste",
+      "budget": "2000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": "LxkceqWirRo"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Infra"
+    },
+    {
+      "id": "2",
+      "name": "Desenvolvimento"
+    },
+    {
+      "id": "3",
+      "name": "Design"
+    },
+    {
+      "id": "41",
+      "name": "Planejamento"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
