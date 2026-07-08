@@ -109,6 +109,17 @@
       "cost": 0,
       "services": [],
       "id": "LxkceqWirRo"
+    },
+    {
+      "name": "projeto teste 3",
+      "budget": "20000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": "cgklxb5I-co"
     }
   ],
   "categories": [
