@@ -120,6 +120,17 @@
       "cost": 0,
       "services": [],
       "id": "cgklxb5I-co"
+    },
+    {
+      "name": "projeto teste",
+      "budget": "10000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": "txsmxkwG8FE"
     }
   ],
   "categories": [
