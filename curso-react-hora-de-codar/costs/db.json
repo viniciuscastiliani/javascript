@@ -9,28 +9,6 @@
       },
       "cost": 0,
       "services": [],
-      "id": "bJjnpA7faPw"
-    },
-    {
-      "name": "projeto teste",
-      "budget": "2000",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": [],
-      "id": "9U3nhMZASQc"
-    },
-    {
-      "name": "projeto teste",
-      "budget": "2000",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": [],
       "id": "2r6UsobxbDk"
     },
     {
@@ -109,39 +87,6 @@
       "cost": 0,
       "services": [],
       "id": "LxkceqWirRo"
-    },
-    {
-      "name": "projeto teste 3",
-      "budget": "20000",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": [],
-      "id": "cgklxb5I-co"
-    },
-    {
-      "name": "projeto teste",
-      "budget": "10000",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": [],
-      "id": "txsmxkwG8FE"
-    },
-    {
-      "name": "projeto teste",
-      "budget": "10000",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": [],
-      "id": "ifOSFNdmaKM"
     }
   ],
   "categories": [
