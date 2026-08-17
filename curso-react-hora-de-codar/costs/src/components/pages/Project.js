@@ -1,3 +1,5 @@
+import { parse, v4 as uuidv4 } from 'uuid'
+
 import styles from './Project.module.css'
 
 import { useParams } from 'react-router-dom'
@@ -64,7 +66,27 @@ function Project() {
 
     }
 
-    function createService() {
+    function createService(project) {
+
+        //last service
+        const lastService = project.services[project.services.length - 1]
+
+        lastService.id = uuidv4()
+
+        const lastServiceCost = lastService.cost
+
+        const newCost = parseFloat(project.cost) + parseFloat(lastServiceCost)
+
+        //maximum value validation
+        if (newCost > parseFloat(project.budget)) {
+            setMessage ('Orçamento ultrapassado, verifique o valor do serviço')
+            setType('errpr')
+            project.services.pop()
+            return false
+        }
+
+        //ad service cost
+
 
     }
 
