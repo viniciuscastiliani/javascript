@@ -25,8 +25,15 @@
         "id": "2",
         "name": "Desenvolvimento"
       },
-      "cost": 0,
-      "services": [],
+      "cost": 500,
+      "services": [
+        {
+          "name": "Contratar Dev Php",
+          "cost": "500",
+          "description": "Vai criar a função de envio de e-mails",
+          "id": "d2056249-975e-4770-875d-02b28de99056"
+        }
+      ],
       "id": "allPd-VQ3bw"
     }
   ],
