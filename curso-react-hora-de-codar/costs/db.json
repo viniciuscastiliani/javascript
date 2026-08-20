@@ -7,15 +7,8 @@
         "id": "3",
         "name": "Design"
       },
-      "cost": 100,
-      "services": [
-        {
-          "name": "layout",
-          "cost": "100",
-          "description": "Faz isso aqui",
-          "id": "47d1c368-4d9e-4391-94de-bf2bc67696a1"
-        }
-      ],
+      "cost": 0,
+      "services": [],
       "id": "2r6UsobxbDk"
     },
     {
