@@ -2,8 +2,13 @@
     padding: 1em;
     border: 1px solid #7a7a7a;
     border-radius: 5px;
-    width: 24%;
+    width: 30%;
     margin: 0.5%;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
 }
 
 .projectCard h4 {
@@ -57,24 +62,26 @@
 .projectCardActions {
     margin-top: 1.2em;
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    gap: .5em;
 }
 
 .projectCardActions a,
 .projectCardActions button {
     text-decoration: none;
-    border: none;
+    border: 1px solid #222;
     background-color: #fff;
     color: #222;
     font-size: .9em;
-    padding: .6em 1em;
-    margin-right: 1em;
+    padding: .6em .8em;
+    margin: 0;
     cursor: pointer;
-    border: 1px solid #222;
     border-radius: 8px;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     transition: 0.5s;
 }
 
