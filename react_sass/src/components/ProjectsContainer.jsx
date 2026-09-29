@@ -2,7 +2,7 @@ const ProjectsContainer = () => {
   return <section className="projectsContainer">
     <h2>Projetos</h2>
     <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore atque exercitationem aliquid voluptates, ratione ea aperiam, deserunt suscipit blanditiis laborum nesciunt ullam natus nisi dolorem! Amet suscipit ratione blanditiis neque!
+        Você pode encontrar os meus projetos pessoais e projetos de estudos no meu GitHub. Acesse o botão abaixo.
     </p>
 
     <a href="" className="btn">

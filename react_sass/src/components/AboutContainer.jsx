@@ -2,11 +2,11 @@ const AboutContainer = () => {
   return <section className="aboutContainer">
     <h2>Sobre</h2>
     <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore atque exercitationem aliquid voluptates, ratione ea aperiam, deserunt suscipit blanditiis laborum nesciunt ullam natus nisi dolorem! Amet suscipit ratione blanditiis neque!
+        Profissional com atuação nas áreas de Marketing e Desenvolvimento Front-End, unindo criatividade, estratégia e conhecimento técnico. Atualmente, desempenho a função de Analista de Marketing na rede de franquias Água Doce Sabores do Brasil, onde sou responsável pela criação de conteúdos para redes sociais, com foco em campanhas institucionais, lançamentos de produtos e fortalecimento da marca.
     </p>
 
     <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore atque exercitationem aliquid voluptates, ratione ea aperiam, deserunt suscipit blanditiis laborum nesciunt ullam natus nisi dolorem! Amet suscipit ratione blanditiis neque!
+        Paralelamente, atuo e estudo conteúdos para Desenvolvimento Front-End. Tenho domínio em tecnologias como HTML e CSS e estou estudando no momento Javascript.
     </p>
     
   </section>
