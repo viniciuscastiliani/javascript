@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="pt-BR">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>ComLimão · Jobs</title>
+		<link rel="stylesheet" href="./estilos/style.css">
+	</head>
+
+	<body>
+		<main class="shell">
+			<header class="top">
+				<div class="brand"><i class="fruit"></i>comlimão</div><button
+					class="secondary" id="themeButton" aria-pressed="false">Modo
+					noturno</button>
+			</header>
+			<section class="intro">
+				<div>
+					<p class="eyebrow">Operação</p>
+					<h1>Trabalhos e horas<br>da agência</h1>
+				</div>
+				<p>Registre cada job, atribua um participante e acompanhe o
+					tempo de início até a conclusão.</p>
+			</section>
+			<section class="toolbar" aria-label="Filtros e ações">
+				<div class="filters"><label class="field">Visualização<select
+							id="personFilter"
+							aria-label="Filtrar por participante"></select></label><label
+						class="field">Status<select id="statusFilter">
+							<option value="todos">Todos os jobs</option>
+							<option value="aberto">Em andamento</option>
+							<option value="aprovacao">Em aprovação</option>
+							<option value="espera">Em espera</option>
+							<option value="concluido">Concluídos</option>
+							<option value="cancelado">Cancelados</option>
+						</select></label>
+					<div class="field">Período<input id="dateFrom" type="date"
+							aria-label="Data inicial"></div>
+					<div class="field">Até<input id="dateTo" type="date"
+							aria-label="Data final"></div>
+				</div>
+				<div class="actions"><button class="secondary"
+						id="csvButton">Exportar CSV</button><button
+						class="secondary" id="participantButton">+
+						Participante</button><button class="action lime"
+						id="jobButton">+ Novo job</button></div>
+			</section>
+			<section class="metrics" aria-label="Resumo">
+				<article class="metric highlight">
+					<div class="metric-label">Horas registradas</div>
+					<div class="metric-value" id="totalHours">0h</div>
+					<div class="metric-sub">somente jobs concluídos</div>
+				</article>
+				<article class="metric">
+					<div class="metric-label">Jobs no painel</div>
+					<div class="metric-value" id="jobCount">0</div>
+					<div class="metric-sub">conforme filtros atuais</div>
+				</article>
+				<article class="metric">
+					<div class="metric-label">Em andamento</div>
+					<div class="metric-value" id="openCount">0</div>
+					<div class="metric-sub">sem horário de fim</div>
+				</article>
+				<article class="metric">
+					<div class="metric-label">Média por job</div>
+					<div class="metric-value" id="averageHours">0h</div>
+					<div class="metric-sub">jobs com duração</div>
+				</article>
+			</section>
+			<section class="content">
+				<article class="card">
+					<div class="card-head">
+						<div>
+							<h2>Horas por dia</h2>
+							<p class="card-caption" id="chartCaption">Últimos
+								sete dias com registros</p>
+						</div>
+					</div>
+					<div id="hoursChart"></div>
+				</article>
+				<aside class="card">
+					<div class="card-head">
+						<div>
+							<h2>Participantes</h2>
+							<p class="card-caption">Horas concluídas no filtro
+							</p>
+						</div>
+					</div>
+					<div class="team-list" id="teamList"></div>
+				</aside>
+				<article class="card table-card">
+					<div class="table-title">
+						<h2>Jobs cadastrados</h2>
+						<p class="card-caption">Um job pode conter diversos
+							apontamentos em dias diferentes.</p>
+					</div>
+					<div class="table-wrap">
+						<table>
+							<thead>
+								<tr>
+									<th>Job</th>
+									<th>Unidade / cidade</th>
+									<th>Participante</th>
+									<th>Início · entrega</th>
+									<th>Apontamentos</th>
+									<th>Duração</th>
+									<th>Status</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody id="jobsBody"></tbody>
+						</table>
+					</div>
+				</article>
+			</section>
+		</main>
+
+		<div class="dialog" id="jobDialog" aria-hidden="true">
+			<form class="modal" id="jobForm">
+				<h2 id="jobFormTitle">Novo job</h2>
+				<div class="form-grid"><label class="full">Nome do
+						trabalho<input name="title" required maxlength="120"
+							placeholder="Ex.: Criar campanha de primavera"></label><label>Unidade
+						/ cidade<input name="location" maxlength="100"
+							placeholder="Ex.: Loja Centro · Campinas"></label><label>Cliente
+						/ área<input name="client" maxlength="80"
+							placeholder="Ex.: Franqueadora"></label><label>Participante<select
+							name="participant" id="jobParticipant"
+							required></select></label><label>Status<select
+							name="status">
+							<option value="aberto">Em andamento</option>
+							<option value="aprovacao">Em aprovação</option>
+							<option value="espera">Em espera</option>
+							<option value="concluido">Concluído</option>
+							<option value="cancelado">Cancelado</option>
+						</select></label><label>Data de início<input
+							name="startDate" type="date"></label><label>Data de
+						entrega<input name="deliveryDate" type="date"></label>
+					<section class="full entry-section">
+						<div class="entry-head"><span>Apontamentos de
+								horário</span><button type="button"
+								class="secondary" id="addEntryButton">+
+								Adicionar horário</button></div>
+						<div class="entry-list" id="entryList"></div>
+					</section>
+				</div>
+				<p class="form-error" id="jobError" aria-live="polite"></p>
+				<div class="modal-actions"><button type="button"
+						class="secondary"
+						data-close="jobDialog">Cancelar</button><button
+						class="action lime">Salvar job</button></div>
+			</form>
+		</div>
+		<div class="dialog" id="participantDialog" aria-hidden="true">
+			<form class="modal" id="participantForm">
+				<h2>Adicionar participante</h2>
+				<div class="form-grid"><label class="full">Nome<input
+							name="name" required maxlength="40"
+							placeholder="Ex.: Ana Souza"></label><label>Cor do
+						participante<input name="color" type="color"
+							value="#8fc93a"></label></div>
+				<p class="form-error" id="participantError" aria-live="polite">
+				</p>
+				<div class="modal-actions"><button type="button"
+						class="secondary"
+						data-close="participantDialog">Cancelar</button><button
+						class="action lime">Adicionar</button></div>
+			</form>
+		</div>
+		<script src="app.js"></script>
+	</body>
+
+</html>
