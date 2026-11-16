@@ -1,5 +1,8 @@
 import { useState } from 'react'
 
+import Todo from './components/Todo'
+import TodoForm from './components/TodoForm'
+
 import './App.css'
 
 function App() {
@@ -30,18 +33,10 @@ function App() {
     <h1>Lista de Tarefas</h1>
     <div className="todoList">
       {todos.map((todo) => (
-        <div className="todo">
-          <div className="content">
-            <p>{todo.text}</p>
-            <p className="category">({todo.category})</p>
-          </div>
-          <div>
-            <button>Completar</button>
-            <button>X</button>
-          </div>
-        </div>
+        <Todo todo={todo} />
       ))}
     </div>
+    <TodoForm />
   </div>
 }
 
